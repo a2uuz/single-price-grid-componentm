@@ -1,63 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: crimson;
-}
-.box{
- display: flex;
+// VARIABLES
+// COLORS
+$Cyan: #2ab2af;
+$Bright_Yellow: #c0df34;
+$Light_Gray: #e5eff5;
+$Grayish_Blue: #98a6bd;
+
+// SIZES
+$padding: 2rem;
+$margin: 1rem;
+$font: 'Karla', sans-serif;
+
+@mixin center {
+display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
- height: 100vh;  
- 
+ @content;
 }
 
+@mixin margin-bottom {
+     &>*{
+        margin-bottom: 1.5rem;
+} 
+
+}
+body{
+    background-color: $Light_Gray;
+    font-family: $font;
+    font-size: 16px;
+    @include center();
+    height: 120vh;  
+}
+
+.box{
+    
+    margin: 1rem 2rem;
+}
+.sizes{
+    padding: $padding;
+    
+    
+}
+
+
 main{
-    width: 70%;
-    height: 250px;
-    background-color: wheat;
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: #fff;
+    @include margin-bottom();
+    
     h1{
-        color: rgb(13, 89, 160);
-        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: $Cyan;
     }
 
     p{
-        font-size: larger;
-        font-weight: 600;
-        color: rgba(9, 32, 165, 0.747);
-        margin-bottom: .5rem;
+        font-weight: 700;
+        color: $Bright_Yellow;
     }
     
     span{
-        font-size: medium;
-        color: rgba(7, 41, 233, 0.747);
-        
+        font-size:1rem;
+        line-height: 1.6rem;
+        color: $Grayish_Blue;
     }
      
-}
-section{
-    width: 35%;
-    height: 250px;
-    background-color: rgb(253, 208, 125);
+    .row{
+        width: 100%;
+        @include center();
+    }
 
-     
-}
-article{
-    width: 35%;
-    height: 250px;
-    background-color: rgb(252, 184, 59);
-}
+    }
+    article{
+    
+        background-color: $Cyan;
+        color: #fff;
+        @include margin-bottom();
 
-.row{
-    // display: flex;
-    width: 100%;
-    // justify-content: center;
-}
+        h2{
+            font-size: 1.3rem;
+        }
+    }
+
+    section{
+        
+        background-color: rgb(252, 184, 59);
+    }
+
+   

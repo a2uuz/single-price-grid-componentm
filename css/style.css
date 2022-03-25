@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,10 +7,9 @@
 }
 
 body {
-  background-color: crimson;
-}
-
-.box {
+  background-color: #e5eff5;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,14 +23,43 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  height: 120vh;
+}
+
+.box {
+  margin: 1rem 2rem;
+}
+
+.sizes {
+  padding: 2rem;
 }
 
 main {
-  width: 70%;
-  height: 250px;
-  background-color: wheat;
-  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+main > * {
+  margin-bottom: 1.5rem;
+}
+
+main h1 {
+  font-size: 1.3rem;
+  color: #2ab2af;
+}
+
+main p {
+  font-weight: 700;
+  color: #c0df34;
+}
+
+main span {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #98a6bd;
+}
+
+main .row {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,38 +70,25 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-main h1 {
-  color: #0d59a0;
-  margin-bottom: 1rem;
-}
-
-main p {
-  font-size: larger;
-  font-weight: 600;
-  color: rgba(9, 32, 165, 0.747);
-  margin-bottom: .5rem;
-}
-
-main span {
-  font-size: medium;
-  color: rgba(7, 41, 233, 0.747);
-}
-
-section {
-  width: 35%;
-  height: 250px;
-  background-color: #fdd07d;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 article {
-  width: 35%;
-  height: 250px;
-  background-color: #fcb83b;
+  background-color: #2ab2af;
+  color: #fff;
 }
 
-.row {
-  width: 100%;
+article > * {
+  margin-bottom: 1.5rem;
+}
+
+article h2 {
+  font-size: 1.3rem;
+}
+
+section {
+  background-color: #fcb83b;
 }
 /*# sourceMappingURL=style.css.map */
