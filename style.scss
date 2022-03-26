@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 // VARIABLES
@@ -14,83 +14,117 @@ $Light_Gray: #e5eff5;
 $Grayish_Blue: #98a6bd;
 
 // SIZES
-$padding: 2rem;
+$padding: 2rem 1.5rem 1rem;
 $margin: 1rem;
-$font: 'Karla', sans-serif;
+$font: "Karla", sans-serif;
 
 @mixin center {
-display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- @content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @content;
 }
 
 @mixin margin-bottom {
-     &>*{
-        margin-bottom: 1.5rem;
-} 
-
+  & > * {
+    margin-bottom: 1.2rem;
+  }
 }
-body{
-    background-color: $Light_Gray;
-    font-family: $font;
-    font-size: 16px;
+body {
+  background-color: $Light_Gray;
+  font-family: $font;
+  font-size: 16px;
+  @include center();
+  height: 100vh;
+}
+
+.box {
+  margin: 1rem 2rem;
+}
+
+main {
+  padding: 2rem;
+  background-color: #fff;
+  @include margin-bottom();
+
+  h1 {
+    font-size: 1.3rem;
+    color: $Cyan;
+  }
+
+  p {
+    font-weight: 700;
+    color: $Bright_Yellow;
+  }
+
+  span {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $Grayish_Blue;
+  }
+
+  .row {
+    width: 100%;
     @include center();
-    height: 120vh;  
+  }
+}
+article {
+  padding: 2rem 1.5rem 0.5rem;
+  background-color: $Cyan;
+  color: rgb(255, 255, 255);
+  @include margin-bottom();
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p:nth-child(3) {
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.767);
+  }
+
+    button {
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: $Bright_Yellow;
+    color: rgba(255, 255, 255, 0.849);
+    font-size: medium;
+    font-weight: 700;
+    cursor: pointer;
+  }
 }
 
-.box{
-    
-    margin: 1rem 2rem;
+.pricePerMonth {
+  @include center();
+  flex-direction: row;
+  justify-content: flex-start;
+
+  p {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  span {
+    padding-left: 0.8rem;
+    color: rgba(255, 255, 255, 0.507);
+  }
 }
-.sizes{
-    padding: $padding;
-    
-    
+
+section {
+  padding: 1.5rem;
+  background-color: #2ab2b0c5;
+
+  h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  p:nth-child(2) {
+    color: rgba(255, 255, 255, 0.603);
+    font-size: medium;
+    line-height: 1.3rem;
+    padding-right: 4rem;
+  }
 }
-
-
-main{
-    background-color: #fff;
-    @include margin-bottom();
-    
-    h1{
-        font-size: 1.3rem;
-        color: $Cyan;
-    }
-
-    p{
-        font-weight: 700;
-        color: $Bright_Yellow;
-    }
-    
-    span{
-        font-size:1rem;
-        line-height: 1.6rem;
-        color: $Grayish_Blue;
-    }
-     
-    .row{
-        width: 100%;
-        @include center();
-    }
-
-    }
-    article{
-    
-        background-color: $Cyan;
-        color: #fff;
-        @include margin-bottom();
-
-        h2{
-            font-size: 1.3rem;
-        }
-    }
-
-    section{
-        
-        background-color: rgb(252, 184, 59);
-    }
-
-   
