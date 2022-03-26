@@ -31,32 +31,32 @@ body {
   margin: 1rem 2rem;
 }
 
-main {
+.col {
   padding: 2rem;
   background-color: #fff;
 }
 
-main > * {
+.col > * {
   margin-bottom: 1.2rem;
 }
 
-main h1 {
+.col h1 {
   font-size: 1.3rem;
   color: #2ab2af;
 }
 
-main p {
+.col p {
   font-weight: 700;
   color: #c0df34;
 }
 
-main span {
+.col span {
   font-size: 1rem;
   line-height: 1.6rem;
   color: #98a6bd;
 }
 
-main .row {
+.col .row {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,7 +155,7 @@ section p:nth-child(2) {
 }
 
 @media (min-width: 590px) {
-  .box {
+  main {
     width: 600px;
   }
   .row {

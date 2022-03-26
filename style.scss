@@ -44,7 +44,7 @@ body {
   margin: 1rem 2rem;
 }
 
-main {
+.col {
   padding: 2rem;
   background-color: #fff;
   @include margin-bottom();
@@ -132,7 +132,7 @@ section {
 
 @media (min-width: 590px){
 
-.box{
+main{
     width: 600px;
 }
 .row{
